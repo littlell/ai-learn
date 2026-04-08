@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+  <!-- this is the object that will be proxied by Spring's AOP infrastructure -->
+  <bean id="fooService" class="com.demo.jvm.spring.core.aop.schema.DefaultFooService"/>
+
+  <!-- this is the actual advice itself -->
+  <bean id="profiler" class="com.demo.jvm.spring.core.aop.schema.SimpleProfiler"/>
+
+  <aop:config>
+    <aop:aspect ref="profiler">
+
+      <aop:pointcut id="theExecutionOfSomeFooServiceMethod"
+                    expression="execution(* com.demo.jvm.spring.core.aop.schema.DefaultFooService.getFoo(..))"/>
+
+      <aop:before pointcut-ref="theExecutionOfSomeFooServiceMethod" method="profilerBefore"/>
+
+      <aop:after-returning pointcut-ref="theExecutionOfSomeFooServiceMethod"
+                           method="profilerAfterReturning"/>
+
+      <aop:after pointcut-ref="theExecutionOfSomeFooServiceMethod" method="profilerAfter"/>
+
+      <aop:after-throwing pointcut-ref="theExecutionOfSomeFooServiceMethod"
+                          method="profilerException"/>
+
+      <aop:around pointcut-ref="theExecutionOfSomeFooServiceMethod" method="profilerAround"/>
+
+    </aop:aspect>
+  </aop:config>
+
+</beans>

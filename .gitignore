@@ -27,6 +27,7 @@ bin/
 gen/
 .gradle/
 !gradle/wrapper/gradle-wrapper.jar
+.m2/
 
 # ---------- IDE ----------
 .idea/

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="helloService" class="com.demo.jvm.spring.core.ioc.instancefactory.HelloService"/>
+
+  <bean id="hello01Bean"
+        factory-bean="helloService"
+        factory-method="createNewHello01BeanInstance"/>
+
+  <bean id="hello02Bean"
+        factory-bean="helloService"
+        factory-method="createNewHello02BeanInstance"/>
+
+</beans>

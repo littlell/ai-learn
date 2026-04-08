@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <properties>
+    <java.version>21</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.5.3</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.demo.jvm.spring.boot</groupId>
+  <artifactId>demo-spring-boot</artifactId>
+  <packaging>pom</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <modules>
+    <module>demo-spring-boot-config</module>
+    <module>demo-spring-boot-elasticsearch</module>
+    <module>demo-spring-boot-rabbitmq</module>
+    <module>demo-spring-boot-cassandra</module>
+    <module>demo-spring-boot-mongodb</module>
+    <module>demo-spring-boot-multicache</module>
+    <module>demo-spring-boot-kafka</module>
+    <module>demo-spring-boot-rsocket</module>
+    <module>demo-spring-boot-resilience4j</module>
+    <module>demo-spring-boot-errorhandling</module>
+  </modules>
+
+</project>
