@@ -25,6 +25,6 @@ mvn compile
 | [distributed](./distributed) | 分布式与中间件：消息队列、一致性、分布式事务等 |
 | [network](./network) | 计算机网络：Socket、HTTP/TCP 行为、协议验证、抓包与解析等 |
 | [cloud-native](./cloud-native) | 云原生与运维：Docker、K8s、CI/CD、可观测性 |
-| [linux](./linux) | Linux：常用命令、Shell 脚本、进程与文件、文本处理与排查等 |
+| [linux](./linux) | Linux：常用命令、Shell 脚本、进程与文件、文本处理与排查等，含 VIM 编辑器练习 |
 | [other-languages](./other-languages) | 其他语言学习：Go、Python、Rust 等，可按语言再分子目录 |
 | [books](./books) | 读书学习：按书名为子目录，通过源码跟读技术类书籍（含凤凰架构示例） |
