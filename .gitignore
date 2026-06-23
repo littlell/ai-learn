@@ -72,3 +72,4 @@ temp/
 node_modules/
 *.min.js
 *.min.css
+.claude/settings.local.json
