@@ -1,6 +1,5 @@
 package com.demo.jvm.spring.core.di.pnamespace;
 
-import javax.sql.DataSource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

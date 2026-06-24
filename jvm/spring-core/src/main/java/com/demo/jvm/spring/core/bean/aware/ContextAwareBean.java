@@ -4,7 +4,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 public class ContextAwareBean implements ApplicationContextAware {
   private ApplicationContext context;

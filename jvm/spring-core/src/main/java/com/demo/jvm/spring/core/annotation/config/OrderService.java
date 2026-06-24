@@ -1,10 +1,9 @@
 package com.demo.jvm.spring.core.annotation.config;
 
 import java.util.Optional;
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.context.ApplicationContext;
 import org.springframework.lang.Nullable;
 
@@ -24,7 +23,6 @@ public class OrderService {
   @Autowired
   private ApplicationContext context;
 
-  @Required
   public void setPayService(PayService payService) {
     this.payService = payService;
   }
